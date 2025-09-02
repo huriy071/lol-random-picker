@@ -1,0 +1,64 @@
+@charset "UTF-8";
+body{
+    background-color: rgb(70, 81, 94);
+    color: #FFFFFF;
+    text-align: center; 
+}
+
+.champ{
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 18%; 
+    text-align: center;
+}
+
+.jp_name{
+    font-size: 80%;
+    font-weight: 600;
+    
+}
+
+.picker_box{
+    color: #000000;
+    display: flex;
+    justify-content: space-around; 
+    align-items: center; 
+    width: 90%;
+    margin: 20px auto;
+}
+
+.troll {
+    font-size: 0.7em;
+    color: #888;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+button{
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 12px 24px;
+    border: 1px solid #c8c8c8;
+    border-radius: 8px;
+    background-color: #e8e8e8;
+    color: #444444;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1), inset 0 1px 1px rgba(255, 255, 255, 0.7);
+    transition: all 0.2s ease;
+    outline: none;
+}
+
+button:hover {
+    background-color: #d8d8d8;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15), inset 0 1px 1px rgba(255, 255, 255, 0.5);
+    transform: translateY(-1px);
+}
+
+button:active {
+    background-color: #c8c8c8;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), inset 0 1px 1px rgba(0, 0, 0, 0.1);
+    transform: translateY(0);
+}

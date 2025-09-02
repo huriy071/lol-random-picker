@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+    <link th:href="@{/css/picker.css}" rel="stylesheet" type="text/css">
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"></script>
+      
+</head>
+
+<body>
+    <heder>
+        <p>LoL Ramdom Picker</p>
+    </heder>
+    <div class="picker_box">
+        <div class="champ">
+            <p class="jp_name">エイトロックス</p>
+            <img class="champ_img" src="https://ddragon.leagueoflegends.com/cdn/15.17.1/img/champion/Aatrox.png">
+            <p class="text">full AP</p>
+        </div>
+        <div class="champ">
+            <p class="jp_name">エイトロックス</p>
+            <img class="champ_img" src="https://ddragon.leagueoflegends.com/cdn/15.17.1/img/champion/Aatrox.png">
+            <p class="text">full AP</p>
+        </div>
+        <div class="champ">
+            <p class="jp_name">エイトロックス</p>
+            <img class="champ_img" src="https://ddragon.leagueoflegends.com/cdn/15.17.1/img/champion/Aatrox.png">
+            <p class="text">full AP</p>
+        </div>
+        <div class="champ">
+            <p class="jp_name">エイトロックス</p>
+            <img class="champ_img" src="https://ddragon.leagueoflegends.com/cdn/15.17.1/img/champion/Aatrox.png">
+            <p class="text">full AP</p>
+        </div>
+        <div class="champ">
+            <p class="jp_name">エイトロックス</p>
+            <img class="champ_img" src="https://ddragon.leagueoflegends.com/cdn/15.17.1/img/champion/Aatrox.png">
+            <p class="text">full AP</p>
+        </div>
+    </div>
+    <button id="pick_button">抽選</button>
+    <footer>
+        <small>create by.amnesia</small>
+    </footer>
+</body>
+
+<script th:inline="javascript">
+    const button = $("#pick_button");
+    const champs = $(".champ");
+
+
+    button.on('click', function () {
+        roll();
+    });
+
+    function roll() {
+        $.ajax({
+            url: '',
+            method: 'POST',
+            success: function (picks) {
+                for (let i = 0; i < picks.length; i++) {
+                    const pick = picks[i];
+                    const child = champs[i].children;
+                    //console.debug(pick);
+                    // 名前書き換え
+                    const jpname = pick["champ"]["jpName"];
+                    child[0].innerText = jpname;
+                    // 画像置き換え
+                    const name = pick["champ"]["name"];
+                    child[1].src = (/*[[${img}]]*/"") + name + ".png";
+                    // 指示置き換え
+                    child[2].innerText = pick["text"];
+                }
+            },error: function(error) {
+                roll();
+            }
+        });
+    }
+</script>
+
+</html>
