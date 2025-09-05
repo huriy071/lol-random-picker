@@ -1,4 +1,4 @@
-package com.example.picker.controller;
+package com.example.picker.controller.pick;
 
 import java.util.List;
 
@@ -14,7 +14,7 @@ public class PickerClickController {
     @Autowired
     PickClickService clickService;
 
-    @PostMapping()
+    @PostMapping("pick")
     public List<PickClickResponce> post() {
         List<PickClickResponce> responce = clickService.onClick();
         return responce;

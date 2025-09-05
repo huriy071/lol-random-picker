@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>kled対面メモ</title>
+    <link th:href="@{/css/kled.css}" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <!-- https://ddragon.leagueoflegends.com/cdn/15.17.1/data/ja_JP/champion/Kled.json -->
+    <!-- https://ddragon.leagueoflegends.com/cdn/15.17.1/data/ja_JP/champion.json -->
+    <!-- https://ddragon.leagueoflegends.com/cdn/15.17.1/data/ja_JP/summoner.json -->
+    <!-- https://ddragon.leagueoflegends.com/cdn/15.17.1/data/ja_JP/item.json -->
+
+    <!-- https://ddragon.leagueoflegends.com/cdn/15.17.1/img/spell/SummonerFlash.png -->
+    <!--
+        <div class="champ">
+                            <h4 class="name">エイトロックス</h4>
+                            <div class="build">
+                                <h5>ビルドメモ</h5>
+                            </div>
+                            <div class="tips">
+                                <h5>知識</h5>
+                            </div>
+                        </div>
+    -->
+    <header>
+        <h1>クレッド対面メモ</h1>
+        <small>sorce by <a href="https://lolalytics.com/lol/kled/counters/">lolalytics</a> </small>
+    </header>
+    <div>
+        <div class="jumper">
+            <p><a href="#strong">有利対面</a></p>
+            <ul>
+                <li><a href="#aatrox">エイトロックス</a></li>
+                <li><a href="#mordekaiser">モルデカイザー</a></li>
+            </ul>
+            <p><a href="#weak">不利対面</a></p>
+            <ul>
+                <li><a href="#fiora">フィオラ</a></li>
+            </ul>
+        </div>
+        <div class="contents">
+            <div class="info">
+                <h3>スキル</h3>
+                <table class="skil">
+                    <tbody>
+                        <tr>
+                            <th scope="row">P</th>
+                            <td scope="row"><img
+                                    src="https://ddragon.leagueoflegends.com/cdn/15.17.1/img/passive/Kled_P.png"></td>
+                            <td scope="row">
+                                スカールに騎乗し、増加HPはすべてスカールに付与される。<br>
+                                <strong>騎乗時</strong><br>
+                                独自のHPを持つ、スカールがダメージを肩代わりしてくれる。
+                                スカールのHPがなくなった場合、自身に付与されているCCを解除し、極僅かなStasisが付与されて非騎乗となり、QのCDとスタックがリセットされる。<br>
+                                <strong>非騎乗時</strong><br>
+                                基礎MSが305となり、敵チャンピオンへのAA物理ダメージが一定量減少する。<br>
+                                Qが変化し、EとRが使用不可となる<br>
+                                AARangeが250となって、敵チャンピオンに向かう際にMSが増加し、AR、MRが増加する。AR、MRは周囲の敵チャンピオン１体につき30%増加する<br>
+                                敵ミニオンキル、またはエピックモンスターや建物へのAA毎に「勇気」5を、敵チャンピオンにAAかスキルを当てる毎に「勇気」15が増加する。<br>
+                                「勇気」100になると0.5秒後に騎乗状態へと変化し、一定割合のHPを獲得しCDに入る。また、QとEのCDは解消される<br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Q</th>
+                            <td scope="row"><img
+                                    src="https://ddragon.leagueoflegends.com/cdn/15.17.1/img/spell/KledQ.png"></td>
+                            <td scope="row">
+                                <strong>騎乗時</strong><br>
+                                指定方向にトラバサミを投げ、最初に当たった敵チャンピオンか大型モンスターの真の視界を得てトラバサミをひっかけ、当たった全対象に物理ダメージを与える。<br>
+                                敵ミニオンと小型モンスターに対してはダメージが50%増加する。<br>
+                                トラバサミをひっかけた対象の側に1.75秒留まると、対象に追加物理ダメージを与え、引き寄せ、Slowを2.5秒付与する。<br>
+                                <strong>非騎乗時</strong><br>
+                                パッシブ:一定時間毎に1スタック増加する(最大2スタック)。スタック増加時間はAHの効果を受ける。このスキル取得時に1スタックを獲得する。<br>
+                                指定方向に5発の弾丸を扇形に発射すると同時に、Knockbackし、当たった全敵ユニットに物理DMを与える。<br>
+                                １体の敵に複数の弾丸が命中すると、1Hit毎に20%ダメージが増加する。<br>
+                                弾丸が敵チャンピオンに1Hitする毎に「勇気」が5、エピックモンスターに1Hitする毎に2.5増加する。<br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">W</th>
+                            <td scope="row"><img
+                                    src="https://ddragon.leagueoflegends.com/cdn/15.17.1/img/spell/KledW.png"></td>
+                            <td scope="row">
+                                パッシブ:建物を含む敵ユニットへの次の4秒以内の4回までのAAのASが増加(150%)し、4回目の建物を含む敵ユニットへのAAに追加物理DMを付与する。このスキルのCD中は、敵ユニットへのAA毎にCDが0.5秒短縮され、対象がチャンピオンの場合は1.5秒短縮される。
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">E</th>
+                            <td scope="row"><img
+                                    src="https://ddragon.leagueoflegends.com/cdn/15.17.1/img/spell/KledE.png"></td>
+                            <td scope="row">
+                                指定方向にダッシュし、通り道の敵ユニットに物理ダメージを与える。<br>
+                                敵チャンピオンか大型モンスターに当たった場合、MSが1.5秒50%増加し、最後に当たった敵チャンピオンもしくは大型モンスターにマークを付与して再発動可能にする。再発動時にマークのついている敵にリープし、通り道にいる敵ユニットに物理ダメージを与える。<br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">R</th>
+                            <td scope="row"><img
+                                    src="https://ddragon.leagueoflegends.com/cdn/15.17.1/img/spell/KledR.png"></td>
+                            <td scope="row">
+                                指定地点へ壁を回避しながら突撃し(アンストッパブル)、味方チャンピオンのMSを増加を30%させる軌跡を6秒間残す。<br>
+                                突撃中は、時間と同時に増加して突撃終了後も2秒間持続するシールドを獲得する。最初に遭遇した敵チャンピオンに向かって突撃し、移動距離に応じた魔法DMとKnockbackを与える。<br>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="combos">
+                    <h3>コンボ</h3>
+                    <div class="combo">
+                        <h4>再騎乗コンボ</h4>
+                        <img src="https://ddragon.leagueoflegends.com/cdn/15.17.1/img/spell/KledW.png">
+                        (4)
+                        ->
+                        AA
+                        ->
+                        非騎乗<img src="https://ddragon.leagueoflegends.com/cdn/15.17.1/img/spell/KledQ.png">
+                    </div>
+                    <div class="combo">
+                        <h4>レベル3オールインコンボ</h4>
+                        <img src="https://ddragon.leagueoflegends.com/cdn/15.17.1/img/spell/KledE.png">
+                        <img src="https://ddragon.leagueoflegends.com/cdn/15.17.1/img/spell/KledQ.png">
+                        ->
+                        (AA)
+                        ->
+                        <img src="https://ddragon.leagueoflegends.com/cdn/15.17.1/img/spell/KledE.png">
+                        ->
+                        騎乗解除
+                        ->
+                        <img src="https://ddragon.leagueoflegends.com/cdn/15.17.1/img/spell/KledW.png">
+                        (4)
+                        ->
+                        AA
+                        ->
+                        非騎乗<img src="https://ddragon.leagueoflegends.com/cdn/15.17.1/img/spell/KledQ.png">
+                    </div>
+                </div>
+            </div>
+            <div class="strong" id="strong">
+                <h2>有利対面</h2>
+                <div class="champ">
+                    <h4 class="name" id="aatrox">エイトロックス</h4>
+                    <div class="build">
+                        <h5>ビルドメモ</h5>
+                        <div class="flex">
+                            <img src="https://ddragon.leagueoflegends.com/cdn/15.17.1/img/item/223748.png">
+                            <img src="https://ddragon.leagueoflegends.com/cdn/15.17.1/img/item/3047.png">
+                            <img src="https://ddragon.leagueoflegends.com/cdn/15.17.1/img/item/223181.png">
+                        </div>
+                        <div class="flex">
+                            <img src="https://ddragon.leagueoflegends.com/cdn/15.17.1/img/spell/SummonerDot.png">
+                            <img src="https://ddragon.leagueoflegends.com/cdn/15.17.1/img/spell/SummonerTeleport.png">
+                        </div>
+                        敵ジャングルの様子を見てフラッシュが必要であればテレポートと変えてもよい。<br>
+                        レーン戦の間はイグナイトで勝負をするため、重症は不要。<br>
+                        レーン戦後の仲間の様子を見て、集団戦に参加するかどうかで購入を検討<br>
+                        <div class="tips">
+                            <h5>知識</h5>
+                            基本はエイトロックスQをクレッドEで避けつつ、クレッドQを使用しダメージトレード。<br>
+                            エイトロックスQを消費したタイミングでオールインし、退却を繰り返す。<br>
+                            エイトロックスは強力なスケールを持つため、レーン段階で最低1キルは取りたい。<br>
+                            lvl6以降は、エイトロックスRを常に警戒し、Eを残すよう立ち回る。<br>
+                            エイトロックスがRを使用してきた場合、Eもしくはフラッシュで退却し、効果時間終了を待つ。<br>
+                            エイトロックスがブリンクおよびフラッシュを使用し、追跡をした場合はクレッドRで反転し、Eでエイトロックスの後ろへと回って戦闘をしてもよい。<br>
+                            ただし、エイトロックスRの効果時間が残ってる場合はイグナイトを使用しなければ不利となる。<br>
+                        </div>
+                    </div>
+                    <div class="champ">
+                        <h4 class="name" id="mordekaiser">モルデカイザー</h4>
+                        <div class="build">
+                            <h5>ビルドメモ</h5>
+                            <div class="flex">
+                                <img src="https://ddragon.leagueoflegends.com/cdn/15.17.1/img/spell/SummonerDot.png">
+                                <img
+                                    src="https://ddragon.leagueoflegends.com/cdn/15.17.1/img/spell/SummonerTeleport.png">
+                            </div>
+                            状況によって大きくビルドが変わる。
+                            基本はブルーザー
+                            <div class="flex">
+                                <img src="https://ddragon.leagueoflegends.com/cdn/15.17.1/img/item/223748.png">
+                                <img src="https://ddragon.leagueoflegends.com/cdn/15.17.1/img/item/3111.png">
+                                <img src="https://ddragon.leagueoflegends.com/cdn/15.17.1/img/item/223181.png">
+                            </div>
+                            lvl6未満でキルを複数獲得できた場合はスノーボールに進んでもよい
+                            <div class="flex">
+                                <img src="https://ddragon.leagueoflegends.com/cdn/15.17.1/img/item/126697.png">
+                                <img src="https://ddragon.leagueoflegends.com/cdn/15.17.1/img/item/223158.png">
+                                <img src="https://ddragon.leagueoflegends.com/cdn/15.17.1/img/item/3111.png">
+                            </div>
+                            アイオニアは超スノーボール。後半買い替えを推奨
+                        </div>
+                        <div class="tips">
+                            <h5>知識</h5>
+                            クレッド完全有利なのはlv6まで。それ以降はモルデカイザーRでほぼ死亡<br>
+                            <strong>lvl1</strong><br>
+                            オールインはお互いにAA距離の場合クレッド完全有利。<br>
+                            騎乗解除後は即クレッドQを使用し、モルデカイザーAARange外に出る。(騎乗解除クレッド250/モルデカイザー175)<br>
+                            モルデカイザーの征服者フルスタックを確認してからイグナイトを入れると効果的。<br>
+                            <strong>lvl2通常</strong><br>
+                            モルデカイザーはクレッドQを切る明確な手段がないため、クレッドQを使用してからスキルオーダーを考える。<br>
+                            クレッドQフルヒット後引き寄せ + slowでAA範囲内にはいれるのであればクレッドWで仕掛ける。<br>
+                            入れなさそうであればクレッドEで接近し、lvl1と同様にDPS勝負を仕掛ける。<br>
+                            <strong>lvl2先行</strong><br>
+                            即クレッドEをアップし、EQコンボで仕掛ける。<br>
+                            HPが少ない場合はクレッドWを上げれるようにしたいため、控える。<br>
+                        </div>
+                    </div>
+                </div>
+                <div class="weak" id="weak">
+                    <h2>不利対面</h2>
+                    <div class="champ">
+                        <h4 class="name" id="fiora">フィオラ</h4>
+                        <div class="build">
+                            <h5>ビルドメモ</h5>
+                            <div class="flex">
+                                <img src="https://ddragon.leagueoflegends.com/cdn/15.17.1/img/item/223181.png">
+                                <img src="https://ddragon.leagueoflegends.com/cdn/15.17.1/img/item/2501.png">
+                            </div>
+                            <div class="flex">
+                                <img src="https://ddragon.leagueoflegends.com/cdn/15.17.1/img/spell/SummonerDot.png">
+                                <img
+                                    src="https://ddragon.leagueoflegends.com/cdn/15.17.1/img/spell/SummonerTeleport.png">
+                            </div>
+                            普通に戦っても負けるのでフラッシュ不要。イグナイト持ったほうがワンチャンあります。<br>
+                            Trueダメージ対策でHPを伸ばすのが良い<br>
+                        </div>
+                        <div class="tips">
+                            <h5>知識</h5>
+                            フィオラ対面は他のチャンピオンと大きく変わり、W上げが推奨されます。<br>
+                            ハードカウンターとされてる理由は、クレッドの火力スキルであるQはダメージ、CCタイミングが非常にわかりやすく、フィオラWによるパリィを確定で発生させることができます。<br>
+                            ただし、クレッドWも同様で、火力タイミングが明白のため、フィオラWを合わせられる可能性があります。<br>
+                            <strong>対策</strong><br>
+                            うまいフィオラはクレッドQを受けたら反転してWを撃ちに来ます。対策はEQコンボで近づき、E再発動で裏に回りフィオラWを回避すれば勝ちです。<br>
+                            フィオラW食らったら負けです。<br>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>

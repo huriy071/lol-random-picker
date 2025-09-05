@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+.flex img {
+    width: 30px;
+    height: 30px;
+}
+
+.skil img {
+    width: 40px;
+    height: 40px;
+}
+
+.combo img {
+    width: 30px;
+    height: 30px;
+}
